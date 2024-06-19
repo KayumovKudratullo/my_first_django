@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <body>
-<ul>
+    <!-- {{ mymembers }} -->
+<table border="1"> 
+    <tr>
+        <th >ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Phone number</th>
+        <th>Joined date</th>
+    </tr>
+
     {% for x in mymembers %}
-       <li>{{ x.firstname }}</li>
+    <tr>
+        <td>{{x.id}}</td>
+        <td> {{x.firstname}}</td>
+        <td>{{x.lastname}}</td>
+        <td>{{x.phone}}</td>
+        <td>{{x.joined_date}}</td>
+    </tr>
     {% endfor %}
-</ul>
+</table>
+
 </body>
-</html>
+
+
+<!-- <body>
+
+    <p>The queryset object:</p>
+    
+    {{ mymembers }}
+    
+    <p>Loop through the items:</p>
+    
+    <table border='1'>
+      {% for x in mymembers %}
+        <tr>
+          <td>{{ x }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    
+    </body>
+</html> -->
