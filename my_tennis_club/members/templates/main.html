@@ -2,20 +2,20 @@
 <html lang="en">
 
 <body>
-{% extends "master.html" %}
+  {% extends "master.html" %}
 
-{% block title %}
-  My Tennis Club
-{% endblock %}
-
-
-{% block content %}
-  <h1>My Tennis Club</h1>
-
-  <h3>Members</h3>
+  {% block title %}
+    My Tennis Club
+  {% endblock %}
   
-  <p>Check out all our <a href="members/">members</a></p>
+  {% block content %}
+    <div class="main">
+      <h1>My Tennis Club</h1>
   
-{% endblock %}
+      <h3>Members</h3>
+    
+      <p>Check out all our <a href="members/">members</a></p>
+    </div>
+  {% endblock %}
 </body>
 </html>

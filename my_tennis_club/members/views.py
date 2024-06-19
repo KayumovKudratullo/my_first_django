@@ -45,7 +45,10 @@ def testing(request):
     # mymembers = Member.objects.filter(Q(id = 4) | Q(id = 7))
 
     # 4
-    mymembers = Member.objects.filter(firstname__icontains = 'l').values()
+    # mymembers = Member.objects.filter(firstname__icontains = 'l').values()
+
+    # 5
+    mymembers = Member.objects.all().order_by('-firstname').values()
 
     template = loader.get_template('template.html')
     context = {
